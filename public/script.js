@@ -15,15 +15,15 @@ function getRandomIntInclusive(min, max) {
 function changeDataShape(array) {
     return array.reduce((list, item, i) => {
         const findCat = list.find((findItem) => findItem.label === item.category);
-        if (!findCat) {
+        /*if (!findCat) {*/
             list.push({
                 label: item.category,
-                y: 1
+                zip: item.zip
             });
-        } else {
+        /*}*/ /*else {
             const position = list.findIndex((el) => el.label === item.category);
             list[position].y += 1;
-        }
+        }*/
         return list;
     }, []);
 }
@@ -47,7 +47,7 @@ function manipulateAndBind(incomingArray) {
     const div2 = document.createElement('div');
     const obj = {
         label: randomRestaurantArray[0].category,
-        y: randomRestaurantArray.length
+        zip: randomRestaurantArray[0].zip
     };
     div2.innerHTML = `<h2>What we want</h2> <br/> <h4>A category, how many things are in the category</h4><pre><code class="language-javascript">${JSON.stringify(obj)}<br/><br/>`;
 
