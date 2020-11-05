@@ -1,90 +1,51 @@
-/*function changeDataShape(array) {
-    return array.reduce((list, item, i) => {
-        const findCat = list.find((findItem) => findItem.label === item.category);
-            list.push({
-                name: item.name,
-                address: item.address_line_1,
-                label: item.category,
-                zip: item.zip
-            });
-        return list;
-    }, []);
-}
+const api = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
 
-function manipulateAndBind(incomingArray) {
-    const arr = [] ;
-    const api = loadData()
-    arr.push(...api);
+const restArray = [];
 
-    const randomRestaurantArray = arr.map((item) => {
-        const restaurant = incomingArray;
-        return restaurant;
-    });
-    console.log(randomRestaurantArray)
-    sessionStorage.setItem('shortRestaurantList', JSON.stringify(randomRestaurantArray));
-
-    const div = document.createElement('div');
-    div.innerHTML = `<h2>What we have</h2> <br />${JSON.stringify(randomRestaurantArray[0])}<br/><br/>`;
-    $('.flex-outer').append(div);
-
-    const div2 = document.createElement('div');
-    const obj = {
-        name: randomRestaurantArray[0][0].name,
-        address: randomRestaurantArray[0][0].address_line_1,
-        label: randomRestaurantArray[0][0].category,
-        zip: randomRestaurantArray[0][0].zip
-    };
-    div2.innerHTML = `<h2>What we want</h2> <br/> <h4>A category, how many things are in the category</h4><pre><code class="language-javascript">${JSON.stringify(obj)}<br/><br/>`;
-
-    $('.flex-outer').append(div2);
-}
-
-async function loadData() {
-    const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
-    const json = await data.json();
-    return json;
-    
-}
-
-async function mainThread() {
-    console.log('Firing main thread');
-    const manip = await loadData();
-    console.log('Check session storage', sessionStorage);
-    const restaurantData = JSON.parse(sessionStorage.getItem('shortRestaurantList'));
-    manipulateAndBind(manip);
-    console.table(restaurantData);
-}
-
-window.onload = mainThread;*/
-
-const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
-
-const restaurants = [];
-
-fetch(endpoint)
+fetch(api)
     .then(blob => blob.json())
-    .then(data => restaurants.push(...data));
+    .then(data => restArray.push(...data));
 
-function findMatches(wordToMatch, restaurants) {
-    return restaurants.filter(place => {
+function findMatches(wordToMatch, restArray) {
+    return restArray.filter(place => {
         const regex = new RegExp(wordToMatch, 'gi');
         return place.name.match(regex) || place.category.match(regex)
     });
 }
 
 function displayMatches() {
-    const matchArray = findMatches(this.value, restaurants);
+    const matchArray = findMatches(this.value, restArray);
     const html = matchArray.map(place => {
         return `
             <li>
-                <span class="name">${place.name}, ${place.category}</span>
+                <ul>
+                    <li>
+                        <span class="name">Name: ${place.name}</span>
+                    </li>
+                    <li>
+                        <span class="name">Category: ${place.category}</span>
+                    </li>
+                    <li>
+                        <span class="name">Address: ${place.address_line_1}</span>
+                    </li>
+                    <li>
+                        <span class="name">City: ${place.city}</span>
+                    </li>
+                    <li>
+                        <span class="name">Zipcode: ${place.zip}</span>
+                        <br>
+                    </li>
+                </ul>
             </li>
             `;
     }).join('');
+    
     searchInput.innerHTML = html;
+    suggestions.innerHTML = html;
 }
 
 const searchInput = document.querySelector('.UserInput');
+const suggestions = document.querySelector('.suggestions')
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
