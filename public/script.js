@@ -54,5 +54,4 @@ async function mainThread() {
     manipulateAndBind(manip);
     console.table(restaurantData);
 }
-
 window.onload = mainThread; 
