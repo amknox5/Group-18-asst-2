@@ -11,22 +11,23 @@
     ></script>
 </head>
 <body>
-    <div class='container flex-outer'>
-        <div class='row'>
-            <div class='one-half column'> 
-                <h1>Assignment 2 or Andrew Knox, Nate Pines, and Gabriel Sestieri</h1>
-                <div id='navContainer'>
-                    <ul class='suggestions'>
-
-                    </ul>
-                </div>
+    <div class='wrapper'>
+        <div class='container flex-outer'>
+            <!--DIV FOR THE HEADER-->
+            <div class='header'> 
+                <h1>Assignment 2</h1>     
             </div>
-        </div>
-        <form>
-            <p>Input query for resutrant</p>
-            <input class = 'UserInput' id = 'UserInput' type = 'text' placeholder = 'Filter for category or Zipcode'></input>
-        </form>
-        <div class="Resultfilter">
+            <!--DIV FOR THE SEARCH BOX-->
+            <form>
+                <p>Search for an esablishment by zipcode or by category.</p>
+                <input class = 'UserInput' id = 'UserInput' type = 'text' placeholder = 'Category or Zipcode'></input>
+            </form>
+            <!--DIV FOR THE SHOWCASED RESULTS-->
+            <div id="filteredDisplay">
+                <ul class = "suggestions">
+
+                </ul>
+            </div>
             
         </div>
     </div>
