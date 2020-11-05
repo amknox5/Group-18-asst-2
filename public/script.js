@@ -15,17 +15,12 @@ function getRandomIntInclusive(min, max) {
 function changeDataShape(array) {
     return array.reduce((list, item, i) => {
         const findCat = list.find((findItem) => findItem.label === item.category);
-        /*if (!findCat) {*/
             list.push({
                 name: item.name,
                 address: item.address_line_1,
                 label: item.category,
                 zip: item.zip
             });
-        /*}*/ /*else {
-            const position = list.findIndex((el) => el.label === item.category);
-            list[position].y += 1;
-        }*/
         return list;
     }, []);
 }
