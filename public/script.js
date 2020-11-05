@@ -9,7 +9,7 @@ function changeDataShape(array) {
             });
         return list;
     }, []);
-}
+} 
 
 function manipulateAndBind(incomingArray) {
     const arr = [] ;
@@ -20,11 +20,13 @@ function manipulateAndBind(incomingArray) {
         const restaurant = incomingArray;
         return restaurant;
     });
+
+
     console.log(randomRestaurantArray)
     sessionStorage.setItem('shortRestaurantList', JSON.stringify(randomRestaurantArray));
 
     const div = document.createElement('div');
-    div.innerHTML = `<h2>What we have</h2> <br />${JSON.stringify(randomRestaurantArray[0])}<br/><br/>`;
+    div.innerHTML = `<h2>What we have</h2> <br />${JSON.stringify(randomRestaurantArray[0][0])}<br/><br/>`;
     $('.flex-outer').append(div);
 
     const div2 = document.createElement('div');
@@ -34,6 +36,7 @@ function manipulateAndBind(incomingArray) {
         label: randomRestaurantArray[0][0].category,
         zip: randomRestaurantArray[0][0].zip
     };
+    console.log(obj);
     div2.innerHTML = `<h2>What we want</h2> <br/> <h4>A category, how many things are in the category</h4><pre><code class="language-javascript">${JSON.stringify(obj)}<br/><br/>`;
 
     $('.flex-outer').append(div2);
