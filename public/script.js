@@ -17,6 +17,8 @@ function changeDataShape(array) {
         const findCat = list.find((findItem) => findItem.label === item.category);
         /*if (!findCat) {*/
             list.push({
+                name: item.name,
+                address: item.address_line_1,
                 label: item.category,
                 zip: item.zip
             });
@@ -46,6 +48,8 @@ function manipulateAndBind(incomingArray) {
 
     const div2 = document.createElement('div');
     const obj = {
+        name: randomRestaurantArray[0].name,
+        address: randomRestaurantArray[0].address_line_1,
         label: randomRestaurantArray[0].category,
         zip: randomRestaurantArray[0].zip
     };
