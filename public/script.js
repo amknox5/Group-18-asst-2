@@ -6,11 +6,9 @@ const arr = []
 
 //Fetch API data and fill it into array
 fetch(api)
-    .then((fromServer) => fromServer.json())
-    .then(jsonFromServer => arr.push(jsonFromServer))
-    .catch((err) => {
-        console.log(err);
-    });
+    .then(blob => blob.json())
+    .then(data => arr.push(...data))
+    
     
 
 
