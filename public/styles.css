@@ -1,21 +1,17 @@
 /*CSS*/
 body {
-    background: bisque;
+    background: #71C6C6;
   }
   
   .wrapper {
     display: flex;
     flex-direction: column;
-    background: purple;
+    background: #71C6C6;
+    padding-top: 30px;
   }
 
-  .suggestions {
-    /* background: cadetblue;  color here is just to show what area this holds */
-    padding-bottom: 30px;
-  }
- 
   .filteredDisplay {
-    background: blueviolet;
+    background: linear-gradient(#244F75, #71C6C6);
     padding-top: 2%;
     margin: 1%;
     width: 45%;
@@ -43,12 +39,30 @@ body {
   .interface {
     padding: 1px;
     margin-top: 10px;
-    background: red;
   }
-  
-  /* The beige DIV that holds assignment 2 and by group 18 */
+  .name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+  }
+
+  .category {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+  }
+
+  .address {
+    padding-top: 5px;
+  }
+  .address, .city, .zip {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+
+  }
+
+
   .header {
-    background-color: palegoldenrod;
+    background-color: #71C6C6;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -59,32 +73,32 @@ body {
     border-radius: 4px;
   }
 
-  /* Assignment 2 */
   h1 {
     margin: 0px 0px;
     padding: 10px;
-    color: rgb(201, 114, 114);
+    color: #244F75;
     display: flex;
     text-decoration: underline;
     align-self: center;
     font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
     font-size: 2.5em;
     text-transform: capitalize;
     flex-wrap: nowrap;
   }
 
-  /* By Group 18 */
   .cap {
-    color: brown;
+    color: #244F75;
     display: flex;
     align-self: center;
     margin-top: 0px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    padding-left: 10px;
   }
 
-  /* all the CSS under this comment is mostly skeletal */
-
-  .flex-outer li,
-  .flex-inner {
+  .flex-outer li {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -92,44 +106,26 @@ body {
   }
   
 
-  .flex-outer > li > label + *,
-  .flex-inner {
-    flex: 1 0 225px;
-  }
-  
-  .flex-outer button {
-    background-color: darkolivegreen;
-    color: white;
-    padding: 6px 12px;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    border-radius: 3px;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .flex-inner li {
-    width: 100%;
-    padding: 8px 16px;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .flex-inner input {
-    margin-right: 15px;
-  }
-  
-  .flex-inner {
-    padding: 0 8px;
-    justify-content: space-between;
-  }
-  
   .flex-outer {
     width: 960px;
     padding: 0 16px;
     margin:0 auto;
   }
+
+  @media screen and (min-width: 1600px) { 
+    .header{
+      display: flex;
+      flex-direction: column;
+    }
+ 
+
+
+  }
+  
+
+
+  
+  
   
   
  
