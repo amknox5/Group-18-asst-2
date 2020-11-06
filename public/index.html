@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2 for Andrew Knox, Nate Pines, and Gabriel Sestieri</title>
     <link rel="stylesheet" type='text/css' href='styles.css'/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
     <script
             src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
@@ -11,22 +12,25 @@
     ></script>
 </head>
 <body>
-    <div class='container flex-outer'>
-        <div class='row'>
-            <div class='one-half column'> 
-                <h1>Assignment 2 or Andrew Knox, Nate Pines, and Gabriel Sestieri</h1>
-                <div id='navContainer'>
-                    <ul class='suggestions'>
+    <div class='wrapper'>
+        <div class='container flex-outer'>
+            <!--DIV FOR THE HEADER-->
+            <div class='header'> 
+                <h1>Assignment 2</h1>
+                <p class='cap'>By Group 18</p>     
+            </div>
+            <!--DIV FOR THE SEARCH BOX-->
+            <div class='interface'>
+                <form>
+                    <input class = 'UserInput' id = 'UserInput' type = 'text' placeholder = 'Search for an esablishment by zipcode or by category...'></input>
+                </form>
+                <!--DIV FOR THE SHOWCASED RESULTS-->
+                <div>
+                    <ul class = "suggestions">
 
                     </ul>
                 </div>
             </div>
-        </div>
-        <form>
-            <p>Input query for resutrant</p>
-            <input class = 'UserInput' id = 'UserInput' type = 'text' placeholder = 'Filter for category or Zipcode'></input>
-        </form>
-        <div class="Resultfilter">
             
         </div>
     </div>

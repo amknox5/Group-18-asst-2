@@ -1,107 +1,123 @@
 /*CSS*/
 body {
-    background: #eee;
+    background: #71C6C6;
   }
   
   .wrapper {
     display: flex;
     flex-direction: column;
+    background: #71C6C6;
+    padding-top: 30px;
   }
-  
-  .container {
-    min-height: 100%;
-  }
-  
-  .header {
-    color: #fff;
+
+  .filteredDisplay {
+    background: linear-gradient(#244F75, #71C6C6);
+    padding-top: 2%;
+    margin: 1%;
+    width: 45%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    margin-bottom: 5px;
-    padding: 4px 8px;
+    margin: 5px 5px;
     border-radius: 4px;
   }
-  
-  .flex-outer li,
-  .flex-inner {
+
+  .UserInput {
+    width: 48%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 25px;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .interface {
+    padding: 1px;
+    margin-top: 10px;
+  }
+  .name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+  }
+
+  .category {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+  }
+
+  .address {
+    padding-top: 5px;
+  }
+  .address, .city, .zip {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+
+  }
+
+
+  .header {
+    background-color: #71C6C6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 5px;
+    padding: 0px 0px;
+    border-radius: 4px;
+  }
+
+  h1 {
+    margin: 0px 0px;
+    padding: 10px;
+    color: #244F75;
+    display: flex;
+    text-decoration: underline;
+    align-self: center;
+    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 2.5em;
+    text-transform: capitalize;
+    flex-wrap: nowrap;
+  }
+
+  .cap {
+    color: #244F75;
+    display: flex;
+    align-self: center;
+    margin-top: 0px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    padding-left: 10px;
+  }
+
+  .flex-outer li {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
   }
   
-  .flex-outer > li > label,
-  .flex-outer li p {
-    flex: 1 0 125px;
-    max-width: 225px;
-    padding: 8px;
-  }
-   
-  .flex-outer > li > label + *,
-  .flex-inner {
-    flex: 1 0 225px;
-  }
-  
-  .flex-outer button {
-    background-color: darkolivegreen;
-    color: white;
-    padding: 6px 12px;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    border-radius: 3px;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .flex-inner li {
-    width: 100%;
-    padding: 8px 16px;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .flex-inner input {
-    margin-right: 15px;
-  }
-  
-  .flex-inner {
-    padding: 0 8px;
-    justify-content: space-between;
-  }
-  
+
   .flex-outer {
     width: 960px;
     padding: 0 16px;
     margin:0 auto;
   }
-  
-  
-  h1 {
-    margin: 20px 50px;
-    padding: 0 20px;
-    min-height: 75px;
-    background-image: linear-gradient(rgb(68, 47, 107), orange);
-    color: white;
-    display: flex;
-    
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.5em;
-    text-transform: capitalize;
-    flex-wrap: nowrap;
-    border-radius: 4px;
-  }
-  
-  #chartContainer {
-      background: gray;
-      border: 2px dotted black;
-      border-radius: 4px;
-      height: 500px;
-      width: 100%;
-      margin-bottom: 15px;
+
+  @media screen and (min-width: 1600px) { 
+    .header{
+      display: flex;
+      flex-direction: column;
+    }
+ 
+
+
   }
