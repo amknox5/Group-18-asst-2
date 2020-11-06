@@ -9,30 +9,32 @@ fetch(api)
 function findMatches(wordToMatch, restArray) {
     return restArray.filter(place => {
         const regex = new RegExp(wordToMatch, 'gi');
-        return place.name.match(regex) || place.category.match(regex)
+        return place.category.match(regex) || place.zip.match(regex)
     });
 }
+const searchInput = document.querySelector('.UserInput');
+const suggestions = document.querySelector('.suggestions')
 
 function displayMatches() {
     const matchArray = findMatches(this.value, restArray);
     const html = matchArray.map(place => {
         return `
-            <li>
+            <li class="filteredDisplay">
                 <ul>
                     <li>
-                        <span class="name">Name: ${place.name}</span>
+                        <span class="name">${place.name}</span>
                     </li>
                     <li>
-                        <span class="name">Category: ${place.category}</span>
+                        <span class="category">${place.category}</span>
                     </li>
                     <li>
-                        <span class="name">Address: ${place.address_line_1}</span>
+                        <span class="address">${place.address_line_1}</span>
                     </li>
                     <li>
-                        <span class="name">City: ${place.city}</span>
+                        <span class="city">${place.city}</span>
                     </li>
                     <li>
-                        <span class="name">Zipcode: ${place.zip}</span>
+                        <span class="zip">${place.zip}</span>
                         <br>
                     </li>
                 </ul>
@@ -44,8 +46,8 @@ function displayMatches() {
     suggestions.innerHTML = html;
 }
 
-const searchInput = document.querySelector('.UserInput');
-const suggestions = document.querySelector('.suggestions')
+
 
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
+
