@@ -28,7 +28,7 @@ function displayMatches() {
                         <span class="category">${place.category}</span>
                     </li>
                     <li>
-                        <span class="address">${place.address_line_1}</span>
+                        <address class="address">${place.address_line_1}</address>
                     </li>
                     <li>
                         <span class="city">${place.city}</span>
