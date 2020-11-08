@@ -1,123 +1,123 @@
 /*CSS*/
 body {
-    background: #71C6C6;
-  }
-  
-  .wrapper {
+  background: #71C6C6;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #71C6C6;
+  padding-top: 30px;
+}
+
+.filteredDisplay {
+  background: linear-gradient(#244F75, #71C6C6);
+  padding-top: 2%;
+  margin: 1%;
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px;
+  border-radius: 4px;
+}
+
+.UserInput {
+  width: 48%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 25px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.interface {
+  padding: 1px;
+  margin-top: 10px;
+}
+.name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+}
+
+.category {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+}
+
+.address {
+  padding-top: 5px;
+}
+.address, .city, .zip {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+
+}
+
+
+.header {
+  background-color: #71C6C6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 5px;
+  padding: 0px 0px;
+  border-radius: 4px;
+}
+
+h1 {
+  margin: 0px 0px;
+  padding: 10px;
+  color: #244F75;
+  display: flex;
+  text-decoration: underline;
+  align-self: center;
+  font-weight: bold;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 2.5em;
+  text-transform: capitalize;
+  flex-wrap: nowrap;
+}
+
+.cap {
+  color: #244F75;
+  display: flex;
+  align-self: center;
+  margin-top: 0px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+
+.flex-outer {
+  width: 960px;
+  padding: 0 16px;
+  margin:0 auto;
+}
+
+@media screen and (min-width: 1600px) { 
+  .header{
     display: flex;
     flex-direction: column;
-    background: #71C6C6;
-    padding-top: 30px;
-  }
-
-  .filteredDisplay {
-    background: linear-gradient(#244F75, #71C6C6);
-    padding-top: 2%;
-    margin: 1%;
-    width: 45%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 5px;
-    border-radius: 4px;
-  }
-
-  .UserInput {
-    width: 48%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 25px 25px;
-    padding: 4px;
-    border-radius: 4px;
-  }
-
-  .interface {
-    padding: 1px;
-    margin-top: 10px;
-  }
-  .name {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
-  }
-
-  .category {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 400;
-  }
-
-  .address {
-    padding-top: 5px;
-  }
-  .address, .city, .zip {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-
   }
 
 
-  .header {
-    background-color: #71C6C6;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 5px;
-    padding: 0px 0px;
-    border-radius: 4px;
-  }
 
-  h1 {
-    margin: 0px 0px;
-    padding: 10px;
-    color: #244F75;
-    display: flex;
-    text-decoration: underline;
-    align-self: center;
-    font-weight: bold;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
-    font-size: 2.5em;
-    text-transform: capitalize;
-    flex-wrap: nowrap;
-  }
-
-  .cap {
-    color: #244F75;
-    display: flex;
-    align-self: center;
-    margin-top: 0px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 400;
-    padding-left: 10px;
-  }
-
-  .flex-outer li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  
-
-  .flex-outer {
-    width: 960px;
-    padding: 0 16px;
-    margin:0 auto;
-  }
-
-  @media screen and (min-width: 1600px) { 
-    .header{
-      display: flex;
-      flex-direction: column;
-    }
- 
-
-
-  }
+}
