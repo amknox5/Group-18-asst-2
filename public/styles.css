@@ -5,13 +5,12 @@ body {
 
 .wrapper {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   background: #71C6C6;
   padding-top: 30px;
 }
 
-/* .filteredDisplay {
+.filteredDisplay {
   background: linear-gradient(#244F75, #71C6C6);
   padding-top: 2%;
   margin: 1%;
@@ -23,7 +22,7 @@ body {
   align-items: center;
   margin: 5px 5px;
   border-radius: 4px;
-}  */
+}
 
 .UserInput {
   width: 48%;
@@ -61,20 +60,23 @@ body {
 
 }
 
-
 .header {
+  background-color: #71C6C6;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  
+  align-items: center;
+  margin: 5px 5px;
+  padding: 0px 0px;
+  border-radius: 4px;
 }
 
 h1 {
-  display: flex;
-  justify-content: center;
-
   margin: 0px 0px;
   padding: 10px;
   color: #244F75;
+  display: flex;
   text-decoration: underline;
   align-self: center;
   font-weight: bold;
@@ -82,6 +84,7 @@ h1 {
   font-weight: 500;
   font-size: 2.5em;
   text-transform: capitalize;
+  flex-wrap: nowrap;
 }
 
 .cap {
@@ -94,20 +97,11 @@ h1 {
   padding-left: 10px;
 }
 
-.flliex-outer  {
+.flex-outer li {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   flex-direction: column;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-}
-ul {
-  padding: 0;
-  list-style-type: none;
 }
 
 .flex-outer {
@@ -120,8 +114,7 @@ ul {
   .header{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
   }
-
-
-
 }

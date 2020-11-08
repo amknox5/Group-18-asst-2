@@ -18,7 +18,8 @@ const suggestions = document.querySelector('.suggestions')
 function displayMatches() {
     const matchArray = findMatches(this.value, restArray);
     const html = matchArray.map(place => {
-        return `
+        if (this.value != '') {
+            return `
             <li class="filteredDisplay">
                 <ul>
                     <li>
@@ -28,7 +29,7 @@ function displayMatches() {
                         <span class="category">${place.category}</span>
                     </li>
                     <li>
-                        <span class="address">${place.address_line_1}</span>
+                        <address class="address">${place.address_line_1}</address>
                     </li>
                     <li>
                         <span class="city">${place.city}</span>
@@ -40,13 +41,11 @@ function displayMatches() {
                 </ul>
             </li>
             `;
+        }
     }).join('');
     
     searchInput.innerHTML = html;
     suggestions.innerHTML = html;
 }
 
-
-
-searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
