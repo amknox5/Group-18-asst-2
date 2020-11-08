@@ -114,5 +114,7 @@ h1 {
   .header{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
