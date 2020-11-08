@@ -60,7 +60,6 @@ body {
 
 }
 
-
 .header {
   background-color: #71C6C6;
   display: flex;
@@ -105,7 +104,6 @@ h1 {
   flex-direction: column;
 }
 
-
 .flex-outer {
   width: 960px;
   padding: 0 16px;
@@ -117,7 +115,4 @@ h1 {
     display: flex;
     flex-direction: column;
   }
-
-
-
 }
