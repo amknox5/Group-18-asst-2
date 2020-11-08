@@ -6,6 +6,7 @@ fetch(api)
     .then(blob => blob.json())
     .then(data => restArray.push(...data));
 
+
 function findMatches(wordToMatch, restArray) {
     return restArray.filter(place => {
         const regex = new RegExp(wordToMatch, 'gi');
@@ -15,6 +16,7 @@ function findMatches(wordToMatch, restArray) {
 const searchInput = document.querySelector('.UserInput');
 const suggestions = document.querySelector('.suggestions')
 
+
 function displayMatches() {
     const matchArray = findMatches(this.value, restArray);
     const html = matchArray.map(place => {
@@ -23,21 +25,17 @@ function displayMatches() {
             <li class="filteredDisplay">
                 <ul>
                     <li>
-                        <span class="name">${place.name}</span>
+                        ${place.name}
                     </li>
                     <li>
-                        <span class="category">${place.category}</span>
+                        ${place.category}
                     </li>
-                    <li>
-                        <address class="address">${place.address_line_1}</address>
-                    </li>
-                    <li>
-                        <span class="city">${place.city}</span>
-                    </li>
-                    <li>
-                        <span class="zip">${place.zip}</span>
-                        <br>
-                    </li>
+                    <address>
+                        ${place.address_line_1}<br>
+                        ${place.city}<br>
+                        ${place.zip}<br>
+                    </address>
+                    <br>
                 </ul>
             </li>
             `;
