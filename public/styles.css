@@ -26,7 +26,7 @@ form {
 }
 
 .UserInput {
-  width: 35%;
+  width: 30px fit-content;
   margin: 25px 25px;
   padding: 4px;
   border-radius: 4px;
@@ -40,7 +40,10 @@ form {
 
 .suggestions > li {
   background: linear-gradient(#244F75, #71C6C6);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
   padding-top: 2%;
+  padding-right: 4%;
   width: 45%;
   border-radius: 4px;
 }
@@ -56,9 +59,28 @@ li {
   margin:0 auto;
 }
 
-@media screen and (min-width: 1600px) { 
-  .header{
+@media screen and (min-width: 1200px) { 
+  .container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
+
+  .UserInput{
+    width: 250px;
+    height: 25px;
+    margin: 25px 25px;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .try {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .filterCases {
+    width: 100%;
+  }
+
 }
