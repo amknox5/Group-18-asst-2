@@ -76,7 +76,12 @@ li {
   .try {
     display: flex;
     flex-direction: column;
+    position: fixed;
 
+  }
+
+  .suggestions {
+    padding: 10%;
   }
 
   .filterCases {
